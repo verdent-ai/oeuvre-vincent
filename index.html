@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OEUVRE — Vincent: A Life in Ten Frames</title>
+<meta name="description" content="An interactive scroll through the brief, brilliant life of Vincent van Gogh, told in ten paintings." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Special+Elite&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Loading curtain -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">OEUVRE</div>
+    <div class="loader-bar"><span></span></div>
+    <div class="loader-text">Preparing the gallery…</div>
+  </div>
+</div>
+
+<!-- Top brand bar -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">OEUVRE</span>
+    <span class="brand-sub">Lives of the great painters</span>
+  </div>
+  <div class="chapter-meta">
+    <span class="chapter-roman">CHAPTER&nbsp;I</span>
+    <span class="chapter-divider">·</span>
+    <span class="chapter-name">Vincent van Gogh</span>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+</header>
+
+<!-- Bottom corner: painter portrait & narrator -->
+<aside class="painter-card" id="painterCard">
+  <div class="painter-portrait">
+    <img src="images/web/portrait_avatar.jpg" alt="Self-portrait of Vincent van Gogh" />
+    <span class="halo"></span>
+  </div>
+  <div class="painter-meta">
+    <span class="painter-eyebrow">NARRATED BY THE PAINTER</span>
+    <span class="painter-name">Vincent van Gogh</span>
+    <span class="painter-dates">1853 — 1890</span>
+  </div>
+</aside>
+
+<!-- Scene counter & dots -->
+<nav class="dots" id="dots" aria-label="Chapter navigation"></nav>
+<div class="counter" id="counter"><span id="counterNow">00</span><span class="counter-sep">/</span><span id="counterAll">11</span></div>
+
+<!-- Hint -->
+<div class="hint" id="hint">
+  <span class="hint-key">scroll</span>
+  <span class="hint-arrow">→</span>
+  <span class="hint-text">to walk the gallery</span>
+</div>
+
+<!-- Horizontal scroll viewport -->
+<main class="scroll" id="scroll">
+
+  <!-- 0. INTRO -->
+  <section class="scene scene-intro" data-index="0">
+    <div class="intro-stack">
+      <div class="intro-eyebrow">A FILM-STILL OF A LIFE</div>
+      <h1 class="intro-title">
+        <span class="intro-line">Vincent.</span>
+        <span class="intro-line intro-italic">A life in ten frames.</span>
+      </h1>
+      <p class="intro-lede">
+        In thirty-seven years, he painted nearly nine hundred canvases.<br>
+        He sold one.<br>
+        This is his life — told in ten paintings.
+      </p>
+      <div class="intro-cta">
+        <span class="intro-cta-arrow">→</span>
+        <span>Begin the scroll</span>
+      </div>
+    </div>
+    <div class="intro-decor" aria-hidden="true">
+      <div class="rule"></div>
+      <div class="dateline">MMXXVI · OEUVRE NO. 01</div>
+    </div>
+  </section>
+
+  <!-- 1. THE POTATO EATERS -->
+  <section class="scene" data-index="1" data-year="1885" data-place="Nuenen, the Netherlands">
+    <figure class="canvas">
+      <img src="images/web/01_potato_eaters.jpg" alt="The Potato Eaters by Vincent van Gogh, 1885" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">I</span><span class="plate-year">1885</span><span class="plate-place">Nuenen</span></div>
+        <h2 class="plate-title">The Potato Eaters</h2>
+        <div class="plate-medium">Oil on canvas · Van Gogh Museum, Amsterdam</div>
+        <p class="plate-story" data-text="In a darkened cottage in Nuenen, five peasants share a meal of potatoes by the dim light of a single oil lamp. Vincent is thirty-two. He has been a preacher, an art dealer, a teacher — and failed at each. Now, only painting remains. &ldquo;I have wanted to give the impression of a way of life quite different from ours,&rdquo; he writes to his brother Theo. &ldquo;You can see the very hands they ate with.&rdquo; His first masterpiece is dark, awkward, honest. The art world ignores it. He is just beginning."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 2. SELF-PORTRAIT WITH STRAW HAT -->
+  <section class="scene" data-index="2" data-year="1887" data-place="Paris, France">
+    <figure class="canvas">
+      <img src="images/web/02_self_portrait_straw_hat.jpg" alt="Self-Portrait with Straw Hat by Vincent van Gogh, 1887" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">II</span><span class="plate-year">1887</span><span class="plate-place">Paris</span></div>
+        <h2 class="plate-title">Self-Portrait with a Straw Hat</h2>
+        <div class="plate-medium">Oil on canvas · Metropolitan Museum of Art</div>
+        <p class="plate-story" data-text="He has come to Paris to live with Theo. The cafés are filled with Monet, Pissarro, Toulouse-Lautrec — and color, suddenly, everywhere. Vincent paints himself again and again, an apprentice studying his own face. Greens dance against orange; a thousand short strokes vibrate across the canvas. The stiff Dutch peasant is gone. He is learning a new language. He is learning light."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 3. THE YELLOW HOUSE -->
+  <section class="scene" data-index="3" data-year="1888" data-place="Arles, Provence">
+    <figure class="canvas">
+      <img src="images/web/03_yellow_house.jpg" alt="The Yellow House by Vincent van Gogh, 1888" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">III</span><span class="plate-year">1888</span><span class="plate-place">Arles</span></div>
+        <h2 class="plate-title">The Yellow House</h2>
+        <div class="plate-medium">Oil on canvas · Van Gogh Museum, Amsterdam</div>
+        <p class="plate-story" data-text="He flees the grey Paris winter for the south. In Arles he rents four rooms in a small yellow house at 2 Place Lamartine. He dreams of a &ldquo;studio of the south,&rdquo; a brotherhood of painters working in the sun. He buys twelve chairs and a bed, paints the shutters green, and writes to Paul Gauguin — come, come and live with me."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 4. BEDROOM IN ARLES -->
+  <section class="scene" data-index="4" data-year="1888" data-place="Arles, Provence">
+    <figure class="canvas">
+      <img src="images/web/04_bedroom_arles.jpg" alt="The Bedroom by Vincent van Gogh, 1888" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">IV</span><span class="plate-year">1888</span><span class="plate-place">Arles</span></div>
+        <h2 class="plate-title">The Bedroom</h2>
+        <div class="plate-medium">Oil on canvas · Van Gogh Museum, Amsterdam</div>
+        <p class="plate-story" data-text="His bedroom in the yellow house, painted in flat planes of colour &ldquo;to express absolute restfulness.&rdquo; Two pillows. Two chairs. Always two — a place set for the friend who is coming. He paints it like a child draws home: with the certainty of someone who has, finally, arrived."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 5. CAFÉ TERRACE AT NIGHT -->
+  <section class="scene" data-index="5" data-year="1888" data-place="Arles, Provence">
+    <figure class="canvas">
+      <img src="images/web/05_cafe_terrace.jpg" alt="Café Terrace at Night by Vincent van Gogh, 1888" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">V</span><span class="plate-year">1888</span><span class="plate-place">Arles</span></div>
+        <h2 class="plate-title">Café Terrace at Night</h2>
+        <div class="plate-medium">Oil on canvas · Kröller-Müller Museum</div>
+        <p class="plate-story" data-text="September in the Place du Forum. He sets up his easel on the cobblestones and works through the evening, painting directly under the gas lamps. &ldquo;The night is more alive and more richly coloured than the day,&rdquo; he tells his sister. There is no black in the sky — only a blue so deep it sings. He has stopped imitating life. He has begun to translate it."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 6. SUNFLOWERS -->
+  <section class="scene" data-index="6" data-year="1888" data-place="Arles, Provence">
+    <figure class="canvas">
+      <img src="images/web/06_sunflowers.jpg" alt="Sunflowers by Vincent van Gogh, 1888" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">VI</span><span class="plate-year">1888</span><span class="plate-place">Arles</span></div>
+        <h2 class="plate-title">Sunflowers</h2>
+        <div class="plate-medium">Oil on canvas · Van Gogh Museum, Amsterdam</div>
+        <p class="plate-story" data-text="Gauguin is coming. Vincent paints sunflowers for the guest room — frantic, ecstatic, a yellow on yellow on yellow that should not work and somehow does. &ldquo;The sunflower is mine,&rdquo; he writes. He paints them as fast as they wilt. For a few weeks in October the yellow house is full: two painters, two easels, the south. It will not last."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 7. BANDAGED EAR -->
+  <section class="scene" data-index="7" data-year="1889" data-place="Arles, Provence">
+    <figure class="canvas">
+      <img src="images/web/07_bandaged_ear.jpg" alt="Self-Portrait with Bandaged Ear by Vincent van Gogh, 1889" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">VII</span><span class="plate-year">1889</span><span class="plate-place">Arles</span></div>
+        <h2 class="plate-title">Self-Portrait with Bandaged Ear</h2>
+        <div class="plate-medium">Oil on canvas · Courtauld Gallery, London</div>
+        <p class="plate-story" data-text="After nine weeks, the brotherhood collapses. A quarrel with Gauguin, a razor, a piece of his own ear wrapped in newspaper and carried to a woman at a brothel. He wakes in the hospital, remembering nothing. In the self-portrait he paints soon after, he stares back at us — fur cap, green coat, a pipe — calm, almost gentle. The wound is bandaged. The eyes do not flinch."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 8. STARRY NIGHT -->
+  <section class="scene" data-index="8" data-year="1889" data-place="Saint-Rémy-de-Provence">
+    <figure class="canvas">
+      <img src="images/web/08_starry_night.jpg" alt="The Starry Night by Vincent van Gogh, 1889" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">VIII</span><span class="plate-year">1889</span><span class="plate-place">Saint-Rémy</span></div>
+        <h2 class="plate-title">The Starry Night</h2>
+        <div class="plate-medium">Oil on canvas · Museum of Modern Art, New York</div>
+        <p class="plate-story" data-text="He commits himself to the asylum at Saint-Paul-de-Mausole. From the barred window of his cell he sees a single cypress, a sleeping village, and the stars. He paints them not as they are but as they feel — swirling, breathing, immense. It is almost certainly the most famous painting on Earth. He thinks it a failure."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 9. ALMOND BLOSSOMS -->
+  <section class="scene" data-index="9" data-year="1890" data-place="Saint-Rémy-de-Provence">
+    <figure class="canvas">
+      <img src="images/web/09_almond_blossoms.jpg" alt="Almond Blossom by Vincent van Gogh, 1890" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">IX</span><span class="plate-year">1890</span><span class="plate-place">Saint-Rémy</span></div>
+        <h2 class="plate-title">Almond Blossom</h2>
+        <div class="plate-medium">Oil on canvas · Van Gogh Museum, Amsterdam</div>
+        <p class="plate-story" data-text="Theo writes: his son is born, named Vincent Willem. The painter answers with a tree in bloom — pale blossoms against a sky the colour of a robin's egg. No swirling, no grief. Just the gentle Japanese line he has loved for years, and a wish for a small life beginning. It hung above the baby's cradle."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 10. WHEATFIELD WITH CROWS -->
+  <section class="scene" data-index="10" data-year="1890" data-place="Auvers-sur-Oise">
+    <figure class="canvas">
+      <img src="images/web/10_wheatfield_crows.jpg" alt="Wheatfield with Crows by Vincent van Gogh, 1890" loading="lazy" />
+    </figure>
+    <article class="plate">
+      <div class="plate-inner">
+        <div class="plate-meta"><span class="plate-num">X</span><span class="plate-year">1890</span><span class="plate-place">Auvers</span></div>
+        <h2 class="plate-title">Wheatfield with Crows</h2>
+        <div class="plate-medium">Oil on canvas · Van Gogh Museum, Amsterdam</div>
+        <p class="plate-story" data-text="He moves north, to a village near Paris, into a room above a café for three francs fifty a night. In seventy days he paints seventy canvases. Then, on a hot July afternoon, he walks into the wheatfields with a revolver. He returns to his room, and dies two days later in Theo's arms. He is thirty-seven. The crows lift from the wheat and scatter into a sky that has not finished moving."></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 11. EPITAPH -->
+  <section class="scene scene-outro" data-index="11">
+    <div class="outro-stack">
+      <div class="outro-rule"></div>
+      <div class="outro-name">VINCENT WILLEM VAN GOGH</div>
+      <div class="outro-dates">30 March 1853 &nbsp;—&nbsp; 29 July 1890</div>
+      <blockquote class="outro-quote">
+        &ldquo;I dream my painting,<br><em>and then I paint my dream.</em>&rdquo;
+      </blockquote>
+      <div class="outro-rule"></div>
+
+      <div class="outro-next">
+        <span class="outro-eyebrow">CHAPTER II · COMING SOON</span>
+        <h3 class="outro-next-title">Claude Monet — A Garden in Time</h3>
+        <form class="outro-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Saved ✓'; this.querySelector('button').disabled=true;">
+          <input type="email" placeholder="your@email.com" required />
+          <button type="submit">Notify me</button>
+        </form>
+      </div>
+
+      <footer class="outro-foot">
+        <span>OEUVRE · MMXXVI</span>
+        <span>All paintings: public domain · Wikimedia Commons</span>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
